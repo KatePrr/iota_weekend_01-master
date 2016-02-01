@@ -1,0 +1,29 @@
+ .container {
+	padding: 20px;
+	border: 1px solid gray;
+
+}
+
+input {
+	font-size: 100%;
+	background-color: #ffffcc;
+	padding: 1px;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	margin: 3px;
+
+}
+
+.submitClass {
+	background-color: #66ccff;
+}
+
+
+button {
+	font-size: 100%;
+	background-color: #66ccff;
+	padding: 1px;
+	border: 1px solid #bdbdbd;
+	border-radius: 5px;
+	margin: 3px;
+}
