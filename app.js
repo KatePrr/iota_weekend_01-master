@@ -15,8 +15,8 @@ $(document).ready(function() {
 			values[field.name] = field.value;
 		});
 		//salary math ****reference *empSalary.value* to access empSalary in empArray
-	empMonthlySalary = parseInt((empSalary.value)/12);
-	monthlyPayroll += empMonthlySalary;
+		empMonthlySalary = parseInt((empSalary.value)/12);
+		monthlyPayroll += empMonthlySalary;
 
 		
 		$('#employeeForm').find('input[type=text], input[type=number]').val('');
@@ -26,9 +26,8 @@ $(document).ready(function() {
 
 	});
 // Bonus1: add Delete button that deletes last employee info.
-	$('#deleteEmployee').on('click', function(event) {
-		$('#container').children().last().remove();
-		//console.log('clear');
+	$('#container').on('click', '.removeEmployee', function(event) {
+		$(this).parent().remove();
 	});
 
 
@@ -43,7 +42,7 @@ $(document).ready(function() {
 		$el.append('<p>Salary: ' + empInfo.empSalary + '</p>'); 
 		$el.append('<p>Monthly Salary : ' + empMonthlySalary + '</p>'); 
 		$el.append('<p>Total Monthly Payroll : ' + monthlyPayroll + '</p>'); 
-
+		$el.append('<button class="removeEmployee" data-id="' + (empArray.length - 1) + '">Remove Me!</button>');
 	}
 
 });
